@@ -29,7 +29,17 @@ llm = ChatGroq(
 parser = StrOutputParser()
 
 prompt1 = PromptTemplate(
-    template='Give greetings to the user on the {topic}',
+    template="""
+    Give greetings to the user on the {topic}
+    
+    Rules :
+    No other things to be implemented 
+    only greet the user about his topic
+    Also give advice with future innovations
+
+    Output should be Professional
+    
+    """,
     input_variables=['topic']
 )
 
@@ -43,9 +53,9 @@ Do NOT use markdown (no *, #, -, backticks, etc.)
 Do NOT use bullet points
 Write in clean plain text only
 Keep it engaging and professional
-You may use simple emojis
+You may use professional emojis
 
-Output should be like a normal paragraph that can be directly posted on LinkedIn.
+Output should be like a professional paragraph that can be directly posted on LinkedIn.
 """,
 input_variables=["topic"]
 )
