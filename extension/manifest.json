@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "AI LinkedIn Generator",
+  "version": "1.0",
+  "description": "Generate LinkedIn posts using AI",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [],
+  "host_permissions": [
+    "https://linkedin-bot-4qg7.onrender.com/*"
+  ]
+}
