@@ -34,8 +34,20 @@ prompt1 = PromptTemplate(
 )
 
 prompt2 = PromptTemplate(
-    template='Give him the linkedin post message on the {topic} and also use suitable professional emojis and dont use markdown',
-    input_variables=['topic']
+template="""
+Write a professional LinkedIn post about: {topic}.
+
+Rules:
+
+Do NOT use markdown (no *, #, -, backticks, etc.)
+Do NOT use bullet points
+Write in clean plain text only
+Keep it engaging and professional
+You may use simple emojis
+
+Output should be like a normal paragraph that can be directly posted on LinkedIn.
+""",
+input_variables=["topic"]
 )
 
 chain = RunnableParallel({
