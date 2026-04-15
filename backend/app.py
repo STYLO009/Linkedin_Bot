@@ -12,7 +12,7 @@ load_dotenv()
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # allow all for now
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -34,7 +34,7 @@ prompt1 = PromptTemplate(
 )
 
 prompt2 = PromptTemplate(
-    template='Give him the linkedin post message on the {topic} and also use suitable professional emojis',
+    template='Give him the linkedin post message on the {topic} and also use suitable professional emojis and dont use markdown',
     input_variables=['topic']
 )
 
